@@ -192,7 +192,7 @@ DAEMONSTATUS_REFRESH_INTERVAL = 10
 # See step 1~7 above, e.g. 'xoxp-123-456-789-abcde'
 SLACK_TOKEN = os.environ.get('SLACK_TOKEN', '')
 # The default channel to use when sending text via slack, e.g. 'general'
-SLACK_CHANNEL = 'general'
+SLACK_CHANNEL = 'team-berlinrents_live-scraping'
 
 ########## telegram ##########
 # How to create a telegram bot:
@@ -249,7 +249,7 @@ SMTP_CONNECTION_TIMEOUT = 30
 
 ############################## Monitor & Alert ################################
 # The default is False, set it to True to launch the poll subprocess to monitor your crawling jobs.
-ENABLE_MONITOR = False
+ENABLE_MONITOR = True
 
 ########## poll interval ##########
 # Tip: In order to be notified (and stop or forcestop a job when triggered) in time,
@@ -267,18 +267,18 @@ POLL_REQUEST_INTERVAL = 10
 
 # The default is False, set it to True to enable alert via Slack, Telegram, or Email.
 # You have to set up your accounts in the "Send text" section above first.
-ENABLE_SLACK_ALERT = False
+ENABLE_SLACK_ALERT = True
 ENABLE_TELEGRAM_ALERT = False
 ENABLE_EMAIL_ALERT = False
 
 ########## alert working time ##########
 # Monday is 1 and Sunday is 7.
 # e.g, [1, 2, 3, 4, 5, 6, 7]
-ALERT_WORKING_DAYS = []
+ALERT_WORKING_DAYS = [1, 2, 3, 4, 5, 6, 7]
 
 # From 0 to 23.
 # e.g. [9] + list(range(15, 18)) >>> [9, 15, 16, 17], or range(24) for 24 hours
-ALERT_WORKING_HOURS = []
+ALERT_WORKING_HOURS = list(range(9, 18))
 
 ########## basic triggers ##########
 # Trigger alert every N seconds for each running job.
@@ -287,7 +287,7 @@ ON_JOB_RUNNING_INTERVAL = 0
 
 # Trigger alert when a job is finished.
 # The default is False, set it to True to enable this trigger.
-ON_JOB_FINISHED = False
+ON_JOB_FINISHED = True
 
 ########## advanced triggers ##########
 # - LOG_XXX_THRESHOLD:
