@@ -17,7 +17,7 @@ import os
 # The default is '0.0.0.0'.
 SCRAPYDWEB_BIND = '0.0.0.0'
 # Accept connections on the specified port, the default is 5000.
-SCRAPYDWEB_PORT = 5000
+SCRAPYDWEB_PORT = os.environ['PORT']
 
 # The default is False, set it to True to enable basic auth for the web UI.
 ENABLE_AUTH = True
