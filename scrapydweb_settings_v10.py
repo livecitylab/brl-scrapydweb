@@ -192,7 +192,7 @@ DAEMONSTATUS_REFRESH_INTERVAL = 10
 # See step 1~7 above, e.g. 'xoxp-123-456-789-abcde'
 SLACK_TOKEN = os.environ.get('SLACK_TOKEN', '')
 # The default channel to use when sending text via slack, e.g. 'general'
-SLACK_CHANNEL = 'team-berlinrents_live-scraping'
+SLACK_CHANNEL = os.environ.get('SLACK_CHANNEL', '')
 
 ########## telegram ##########
 # How to create a telegram bot:
@@ -274,7 +274,7 @@ ENABLE_EMAIL_ALERT = False
 ########## alert working time ##########
 # Monday is 1 and Sunday is 7.
 # e.g, [1, 2, 3, 4, 5, 6, 7]
-ALERT_WORKING_DAYS = [1, 2, 3, 4, 5, 6, 7]
+ALERT_WORKING_DAYS = [1, 2, 3, 4, 5]
 
 # From 0 to 23.
 # e.g. [9] + list(range(15, 18)) >>> [9, 15, 16, 17], or range(24) for 24 hours
