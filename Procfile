@@ -1,1 +1,1 @@
-web: newrelic-admin run-program scrapydweb
+web: scrapydweb
