@@ -17,13 +17,13 @@ import os
 # The default is '0.0.0.0'.
 SCRAPYDWEB_BIND = '0.0.0.0'
 # Accept connections on the specified port, the default is 5000.
-SCRAPYDWEB_PORT = os.environ['PORT']
+SCRAPYDWEB_PORT = os.environ.get['PORT']
 
 # The default is False, set it to True to enable basic auth for the web UI.
 ENABLE_AUTH = True
 # In order to enable basic auth, both USERNAME and PASSWORD should be non-empty strings.
-USERNAME = os.environ['USER']
-PASSWORD = os.environ['PWD']
+USERNAME = os.environ.get['USER']
+PASSWORD = os.environ.get['PWD']
 
 
 # Make sure that [Scrapyd](https://github.com/scrapy/scrapyd) has been installed
@@ -47,7 +47,7 @@ PASSWORD = os.environ['PWD']
 #   - e.g. ('', '', '127.0.0.1', '6800', '') or ('username', 'password', 'localhost', '6801', 'group')
 SCRAPYD_SERVERS = [
     # 'username:password@localhost:6801#group',
-    ('', '', os.environ['SCRAPYD_SERVER'], '80', 'group'),
+    ('', '', os.environ.get['SCRAPYD_SERVER'], '80', 'group'),
 ]
 
 
