@@ -22,8 +22,8 @@ SCRAPYDWEB_PORT = os.environ.get('PORT')
 # The default is False, set it to True to enable basic auth for the web UI.
 ENABLE_AUTH = True
 # In order to enable basic auth, both USERNAME and PASSWORD should be non-empty strings.
-USERNAME = os.environ.get('USER')
-PASSWORD = os.environ.get('PWD')
+USERNAME = 'admin'
+PASSWORD = 'skdfhnmkjwefg7t7ufbo23b9'
 
 
 # Make sure that [Scrapyd](https://github.com/scrapy/scrapyd) has been installed
