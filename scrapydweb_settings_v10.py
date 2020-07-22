@@ -22,8 +22,8 @@ SCRAPYDWEB_PORT = os.environ['PORT']
 # The default is False, set it to True to enable basic auth for the web UI.
 ENABLE_AUTH = True
 # In order to enable basic auth, both USERNAME and PASSWORD should be non-empty strings.
-USERNAME = 'admin'
-PASSWORD = 'skdfhnmkjwefg7t7ufbo23b9'
+USERNAME = os.environ['USER']
+PASSWORD = os.environ['PWD']
 
 
 # Make sure that [Scrapyd](https://github.com/scrapy/scrapyd) has been installed
@@ -47,7 +47,7 @@ PASSWORD = 'skdfhnmkjwefg7t7ufbo23b9'
 #   - e.g. ('', '', '127.0.0.1', '6800', '') or ('username', 'password', 'localhost', '6801', 'group')
 SCRAPYD_SERVERS = [
     # 'username:password@localhost:6801#group',
-    ('', '', 'berlinrentslive-scraping.herokuapp.com', '80', 'group'),
+    ('', '', os.environ['SCRAPYD_SERVER'], '80', 'group'),
 ]
 
 
