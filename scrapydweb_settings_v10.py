@@ -207,7 +207,7 @@ SLACK_CHANNEL = os.environ.get('SLACK_CHANNEL')
 # See https://core.telegram.org/bots#6-botfather for more info
 
 # See step 1~4 above, e.g. '123:abcde'
-TELEGRAM_TOKEN = os.environ.get('TELEGRAM_TOKEN'), ''
+TELEGRAM_TOKEN = ''
 # See step 5~6 above, e.g. 123456789
 TELEGRAM_CHAT_ID = 0 # int(os.environ.get('TELEGRAM_CHAT_ID')), 0
 
@@ -226,7 +226,7 @@ EMAIL_USERNAME = ''
 # https://stackoverflow.com/a/27515833/10517783 How to send an email with Gmail as the provider using Python?
 # https://stackoverflow.com/a/26053352/10517783 Python smtplib proxy support
 # e.g. 'password4gmail'
-EMAIL_PASSWORD = os.environ.get('EMAIL_PASSWORD'), ''
+EMAIL_PASSWORD = ''
 
 # e.g. 'username@gmail.com'
 EMAIL_SENDER = ''
@@ -343,7 +343,7 @@ VERBOSE = False
 
 # The default is '', which means saving all program data in the Python directory.
 # e.g. 'C:/Users/username/scrapydweb_data' or '/home/username/scrapydweb_data'
-DATA_PATH = os.environ.get('DATA_PATH'), ''
+DATA_PATH = ''
 
 # The default is '', which means saving data of Jobs and Timer Tasks in DATA_PATH using SQLite.
 # The data could be also saved in MySQL or PostgreSQL backend in order to improve concurrency.
@@ -354,4 +354,4 @@ DATA_PATH = os.environ.get('DATA_PATH'), ''
 # 'postgres://username:password@127.0.0.1:5432'
 # 'sqlite:///C:/Users/username'
 # 'sqlite:////home/username'
-DATABASE_URL = os.environ.get('DATABASE_URL'), ''
+DATABASE_URL = os.environ.get('DATABASE_URL')
