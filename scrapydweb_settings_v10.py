@@ -190,9 +190,9 @@ DAEMONSTATUS_REFRESH_INTERVAL = 10
 # See https://api.slack.com/apps for more info
 
 # See step 1~7 above, e.g. 'xoxp-123-456-789-abcde'
-SLACK_TOKEN = os.environ.get('SLACK_TOKEN'), ''
+SLACK_TOKEN = os.environ.get('SLACK_TOKEN')
 # The default channel to use when sending text via slack, e.g. 'general'
-SLACK_CHANNEL = os.environ.get('SLACK_CHANNEL'), ''
+SLACK_CHANNEL = os.environ.get('SLACK_CHANNEL')
 
 ########## telegram ##########
 # How to create a telegram bot:
