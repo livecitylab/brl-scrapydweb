@@ -17,13 +17,13 @@ import os
 # The default is '0.0.0.0'.
 SCRAPYDWEB_BIND = '0.0.0.0'
 # Accept connections on the specified port, the default is 5000.
-SCRAPYDWEB_PORT = os.environ.get['PORT']
+SCRAPYDWEB_PORT = os.environ.get('PORT')
 
 # The default is False, set it to True to enable basic auth for the web UI.
 ENABLE_AUTH = True
 # In order to enable basic auth, both USERNAME and PASSWORD should be non-empty strings.
-USERNAME = os.environ.get['USER']
-PASSWORD = os.environ.get['PWD']
+USERNAME = os.environ.get('USER')
+PASSWORD = os.environ.get('PWD')
 
 
 # Make sure that [Scrapyd](https://github.com/scrapy/scrapyd) has been installed
@@ -47,7 +47,7 @@ PASSWORD = os.environ.get['PWD']
 #   - e.g. ('', '', '127.0.0.1', '6800', '') or ('username', 'password', 'localhost', '6801', 'group')
 SCRAPYD_SERVERS = [
     # 'username:password@localhost:6801#group',
-    ('', '', os.environ.get['SCRAPYD_SERVER'], '80', 'group'),
+    ('', '', os.environ.get('SCRAPYD_SERVER'), '80', 'group')
 ]
 
 
@@ -190,9 +190,9 @@ DAEMONSTATUS_REFRESH_INTERVAL = 10
 # See https://api.slack.com/apps for more info
 
 # See step 1~7 above, e.g. 'xoxp-123-456-789-abcde'
-SLACK_TOKEN = os.environ.get('SLACK_TOKEN', '')
+SLACK_TOKEN = os.environ.get('SLACK_TOKEN'), ''
 # The default channel to use when sending text via slack, e.g. 'general'
-SLACK_CHANNEL = os.environ.get('SLACK_CHANNEL', '')
+SLACK_CHANNEL = os.environ.get('SLACK_CHANNEL'), ''
 
 ########## telegram ##########
 # How to create a telegram bot:
@@ -207,9 +207,9 @@ SLACK_CHANNEL = os.environ.get('SLACK_CHANNEL', '')
 # See https://core.telegram.org/bots#6-botfather for more info
 
 # See step 1~4 above, e.g. '123:abcde'
-TELEGRAM_TOKEN = os.environ.get('TELEGRAM_TOKEN', '')
+TELEGRAM_TOKEN = os.environ.get('TELEGRAM_TOKEN'), ''
 # See step 5~6 above, e.g. 123456789
-TELEGRAM_CHAT_ID = int(os.environ.get('TELEGRAM_CHAT_ID', 0))
+TELEGRAM_CHAT_ID = int(os.environ.get('TELEGRAM_CHAT_ID'), 0)
 
 ########## email ##########
 # The default subject to use when sending text via email.
@@ -226,7 +226,7 @@ EMAIL_USERNAME = ''
 # https://stackoverflow.com/a/27515833/10517783 How to send an email with Gmail as the provider using Python?
 # https://stackoverflow.com/a/26053352/10517783 Python smtplib proxy support
 # e.g. 'password4gmail'
-EMAIL_PASSWORD = os.environ.get('EMAIL_PASSWORD', '')
+EMAIL_PASSWORD = os.environ.get('EMAIL_PASSWORD'), ''
 
 # e.g. 'username@gmail.com'
 EMAIL_SENDER = ''
@@ -343,7 +343,7 @@ VERBOSE = False
 
 # The default is '', which means saving all program data in the Python directory.
 # e.g. 'C:/Users/username/scrapydweb_data' or '/home/username/scrapydweb_data'
-DATA_PATH = os.environ.get('DATA_PATH', '')
+DATA_PATH = os.environ.get('DATA_PATH'), ''
 
 # The default is '', which means saving data of Jobs and Timer Tasks in DATA_PATH using SQLite.
 # The data could be also saved in MySQL or PostgreSQL backend in order to improve concurrency.
@@ -354,4 +354,4 @@ DATA_PATH = os.environ.get('DATA_PATH', '')
 # 'postgres://username:password@127.0.0.1:5432'
 # 'sqlite:///C:/Users/username'
 # 'sqlite:////home/username'
-DATABASE_URL = os.environ.get('DATABASE_URL', '')
+DATABASE_URL = os.environ.get('DATABASE_URL'), ''
