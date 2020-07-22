@@ -209,7 +209,7 @@ SLACK_CHANNEL = os.environ.get('SLACK_CHANNEL'), ''
 # See step 1~4 above, e.g. '123:abcde'
 TELEGRAM_TOKEN = os.environ.get('TELEGRAM_TOKEN'), ''
 # See step 5~6 above, e.g. 123456789
-TELEGRAM_CHAT_ID = int(os.environ.get('TELEGRAM_CHAT_ID')), 0
+TELEGRAM_CHAT_ID = 0 # int(os.environ.get('TELEGRAM_CHAT_ID')), 0
 
 ########## email ##########
 # The default subject to use when sending text via email.
