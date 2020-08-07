@@ -18,7 +18,7 @@ You can run the server locally by using the command:
 
 The server is hosted on a Heroku dyno. Files necessary for Heroku are:
 
-- `Procfile`: to define the command to run _scrapyd_ after deployment
+- `Procfile`: to define the command to run after deployment
 - `runtime.txt`: to define the Python version Heroku should use
 
 Current app on Heroku (on techlabsprojectteam@gmail.com account):
